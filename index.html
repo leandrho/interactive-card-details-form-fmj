@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./styles.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+</head>
+<body>
+
+  <main class="wrapper">
+      <div class="credit__cards" >
+          <div class="credit__card card__front">
+              <img src="./images/card-logo.svg" alt="">
+              <div class="card__numbers">
+                  <div class="card__number">
+                    <p class="card__numset1">0000</p>
+                    <p class="card__numset2">0000</p>
+                    <p class="card__numset3">0000</p>
+                    <p class="card__numset4">0000</p>
+                  </div>
+                  <div class="card__info">
+                    <p class="card__name">Jane Appleseed</p>
+                    <p class="card__date"><span class="card__month">00</span>/<span class="card__year">00</span></p>
+                  </div>
+              </div>
+          </div>
+          <div class="credit__card card__back">
+              <p class="card__numcode">000</p>
+          </div>
+      </div>
+      <form id="form" action="/" class="form" autocomplete="off" novalidate>
+          <label for="name" class="lname">
+            Cardholder Name
+            <input type="text" id="name" placeholder="e.g Jane Appleseed">
+            <p class="required">Can't be blank</p>
+          </label>
+          <label for="cardnumber" class="lnumber">
+            Card Number
+            <input type="text" id="cardnumber" maxlength="19" placeholder="e.g. 1234 5678 9123 0000">
+            <p class="required">Can't be blank</p>
+            <p class="invalid">Wrong format, numbers only</p>
+          </label>
+          <label for="MM" class="ldate">
+            Exp. Date (MM/YY)
+            <div class="date-inputs">
+              <input type="text" maxlength="2" placeholder="MM" id="mm">
+              <input type="text" maxlength="2" placeholder="YY" id="yy">
+            </div>
+            <p class="required">Can't be blank</p>
+            <p class="invalid">Numbers only</p>
+          </label>
+          <label for="code" class="lcode">
+            CVC
+            <input type="text" maxlength="3" placeholder="e.g. 123" id="code">
+            <p class="required">Can't be blank</p>
+            <p class="invalid">Numbers only</p>
+          </label>
+          <button type="submit" class="submit-btn">Confirm</button> 
+      </form>
+      <div class="thanks-msg hidden">
+        <img src="./images/icon-complete.svg" alt="">
+        <h2>Thank you</h2>
+        <p>We've added your card details</p>
+        <button class="close-btn">Continue</button>
+      </div>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
